@@ -166,6 +166,7 @@ class BookController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string',
+            'description' => 'required|string',
             'author' => 'required|string',
             'category_id' => 'required|exists:kategori,id',
             'cover' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
